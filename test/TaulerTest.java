@@ -34,7 +34,7 @@ class TaulerTest {
     @Test
     void verificarEntradaCorrecteEncertat() {
         this.tauler.verificar("a");
-        assertArrayEquals(new String[]{ null,"a",null,"a",null,null,"a" },this.tauler.getPalabraEndevinada());
+        assertArrayEquals(new String[]{ null,"a",null,"a",null,null,"a" },this.tauler.getParaulaEndivinada());
     }
 
     @Test
@@ -63,8 +63,6 @@ class TaulerTest {
         this.tauler.verificar("l");
         assertEquals("paraula", this.tauler.imprimir());
     }
-
-
 
     @Test
     void imprimirVidesPlural() {
