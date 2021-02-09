@@ -28,7 +28,7 @@ class TaulerTest {
 
     @Test
     void verificarEntradaIncorrecte() {
-        assertEquals("Lletra incorrecte",this.tauler.verificar("ll"));
+        assertEquals("Lletra incorrecte",this.tauler.verificar("s"));
     }
 
     @Test
