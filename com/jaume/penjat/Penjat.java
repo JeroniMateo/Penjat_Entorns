@@ -28,5 +28,4 @@ public class Penjat {
             System.out.println("Has perdut");
         }
     }
-
 }

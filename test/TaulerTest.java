@@ -28,13 +28,13 @@ class TaulerTest {
 
     @Test
     void verificarEntradaIncorrecte() {
-        assertEquals("Lletra incorrecte",this.tauler.verificar("ll"));
+        assertEquals("Lletra incorrecte",this.tauler.verificar("s"));
     }
 
     @Test
     void verificarEntradaCorrecteEncertat() {
         this.tauler.verificar("a");
-        assertArrayEquals(new String[]{ null,"a",null,"a",null,null,"a" },this.tauler.getPalabraEndevinada());
+        assertArrayEquals(new String[]{ null,"a",null,"a",null,null,"a" },this.tauler.getParaulaEndivinada());
     }
 
     @Test
@@ -50,6 +50,7 @@ class TaulerTest {
 
     @Test
     void imprimirAmbLletres() {
+        this.tauler.imprimir();
         this.tauler.verificar("a");
         assertEquals("_a_a__a", this.tauler.imprimir());
     }
@@ -63,8 +64,6 @@ class TaulerTest {
         this.tauler.verificar("l");
         assertEquals("paraula", this.tauler.imprimir());
     }
-
-
 
     @Test
     void imprimirVidesPlural() {
