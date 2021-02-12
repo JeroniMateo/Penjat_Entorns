@@ -99,9 +99,18 @@ public class Tauler {
     }
 
     public String verificar(String lletra) {
+
         char miLetra = lletra.charAt(0);
         setLletra(lletra);
         String content = "";
+        if (lletra.equals(String.valueOf(getParaulaSecreta()))) {
+            for (int i = 0; i < getParaulaEndivinada().length; i++) {
+                this.imprimir[i] = String.valueOf(this.paraulaSecreta[i]);
+                this.paraulaEndivinada[i] = String.valueOf(this.paraulaSecreta[i]);
+            }
+            hasGuanyat();
+            return "";
+        }
 
         if (getComodin().equals(1)) {
             for (int i = 0; i < this.paraulaSecreta.length; i++) {
@@ -135,6 +144,13 @@ public class Tauler {
 
     public String imprimir() {
         String content = "";
+
+        if (hasGuanyat()) {
+            for (int i = 0; i < this.getParaulaEndivinada().length; i++) {
+                content += this.imprimir[i];
+            }
+            return content;
+        }
 
         if (getComodin2().equals(1)) {
             for (int i = 0; i < getParaulaSecreta().length; i++) {

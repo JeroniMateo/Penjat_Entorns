@@ -50,6 +50,7 @@ class TaulerTest {
 
     @Test
     void imprimirAmbLletres() {
+        this.tauler.imprimir();
         this.tauler.verificar("a");
         assertEquals("_a_a__a", this.tauler.imprimir());
     }
